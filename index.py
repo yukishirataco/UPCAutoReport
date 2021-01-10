@@ -4,15 +4,13 @@ import smtplib
 from email.mime.text import MIMEText
 
 def main_handler(event, context):
-    mail_addr = ''
-    mail_password = ''
-    smtp_server = 'smtp.qq.com'
-    recv_addr = ''
-    # Payload，请自行在浏览器的开发人员工具中获取
-    payload_data = { 
-    }
-    upcid = ''
-    upcpassword = ''
+    mail_addr = '' # 发件邮箱
+    mail_password = '' # 邮箱SMTP密码（也有可能是授权码，比如QQ)
+    smtp_server = 'smtp.qq.com' # 邮箱SMTP地址
+    recv_addr = '' # 收件邮箱地址
+    payload_data = # Payload，请自行在浏览器的开发人员工具中获取，格式为形如{"sfzgsxsx": "0"}的内容
+    upcid = '' # 石大学号
+    upcpassword = '' # 数字石大密码
     login_url = 'https://app.upc.edu.cn/uc/wap/login/check'
     save_url = 'https://app.upc.edu.cn/ncov/wap/default/save'
 
