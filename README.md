@@ -15,7 +15,7 @@
 
 请参考 [国内各大邮件平台SMTP服务器地址与端口大全](https://www.fujieace.com/jingyan/smtp.html) 配置 SMTP 服务器，QQ 邮箱之类的可能需要发送短信获取授权码以登录 SMTP 服务器。
 
-然后请点击本项目页面右上角绿色的`↓ Code`图标，点击里面的`Download ZIP`下载回本项目的代码，解压得到一个 index.py 文件
+然后请点击本项目页面右上角绿色的`↓ Code`图标，点击里面的[Download ZIP](https://github.com/npfjcg/UPCAutoReport/archive/main.zip)下载回本项目的代码，解压得到一个 index.py 文件
 
 ## 部署之前的准备
 
