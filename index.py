@@ -18,10 +18,11 @@ def main_handler(event, context):
     save_url = 'https://app.upc.edu.cn/ncov/wap/default/save'
     report = requests.Session()
     login = report.post(login_url,data=dict(username=upcid,password=upcpassword))
-        server = smtplib.SMTP(smtp_server, 587) # SMTP协议默认端口是25
-        server.starttls()
-        server.login(mail_addr, mail_password)
+    server = smtplib.SMTP(smtp_server, 587) # SMTP协议默认端口是25
+    server.starttls()
+    server.login(mail_addr, mail_password)
     if login.status_code == 200:
+        ret = report.post(save_url,data=payload_data)
         msg = MIMEText(ret.json()['m'], 'plain', 'utf-8')
         server.sendmail(mail_addr, recv_addr, msg.as_string())
         server.quit()
