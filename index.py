@@ -18,7 +18,7 @@ def main_handler(event, context):
     save_url = 'https://app.upc.edu.cn/ncov/wap/default/save'
     report = requests.Session()
     login = report.post(login_url,data=dict(username=upcid,password=upcpassword))
-    server = smtplib.SMTP(smtp_server, 587) # SMTP协议默认端口是25
+    server = smtplib.SMTP(smtp_server, 587) # SMTP协议默认端口是25,为了安全发送，可以使用587端口
     server.starttls()
     server.login(mail_addr, mail_password)
     if login.status_code == 200:
